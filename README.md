@@ -1,9 +1,9 @@
 # LLM Feedback SDK
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.interfish418/llm-feedback)](https://search.maven.org/artifact/io.github.interfish418/llm-feedback)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Commercial](https://img.shields.io/badge/License-Commercial-red.svg)](https://github.com/interfish418/llm-feedback/blob/main/LICENSE)
 
-An Android SDK that enables seamless integration of AI-powered feedback collection in mobile applications.
+A commercial Android SDK for AI-powered feedback collection in mobile applications.
 
 ## Features
 
@@ -24,102 +24,19 @@ dependencies {
 }
 ```
 
-## Quick Start
-
-### Basic Setup
-
-```kotlin
-import com.example.llm_feedback.*
-
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        
-        // Initialize the SDK
-        LLMFeedback.initialize(this)
-        
-        // Show feedback dialog
-        FeedbackCard.show(this) { feedback ->
-            // Handle feedback result
-            println("Received feedback: $feedback")
-        }
-    }
-}
-```
-
-### Voice-Enabled Feedback
-
-```kotlin
-// Enable voice input for feedback collection
-val voiceComponent = WaveformBarVoiceInputComponent(this)
-voiceComponent.setOnFeedbackReceivedListener { audioFeedback ->
-    // Process voice feedback
-    handleVoiceFeedback(audioFeedback)
-}
-```
-
-### Custom Rating Component
-
-```kotlin
-// Use built-in emoji rating component
-val ratingComponent = EmojiRatingComponent(this)
-ratingComponent.setOnRatingChangedListener { rating ->
-    // Rating from 1-5
-    submitRating(rating)
-}
-```
-
-## Configuration
-
-### API Keys
-
-Add your API keys to `local.properties`:
-
-```properties
-google.api.key=YOUR_GOOGLE_API_KEY
-openai.api.key=YOUR_OPENAI_API_KEY
-```
-
-### Permissions
-
-Add these permissions to your `AndroidManifest.xml`:
-
-```xml
-<uses-permission android:name="android.permission.RECORD_AUDIO" />
-<uses-permission android:name="android.permission.INTERNET" />
-```
-
-## Requirements
-
-- Android API level 24 (Android 7.0) or higher
-- Kotlin support
-- Internet connection for AI processing
-
 ## Documentation
 
-For detailed documentation and advanced usage examples, visit our [documentation site](https://github.com/interfish418/llm-feedback/wiki).
-
-## Support
-
-If you encounter any issues or have questions:
+This is a commercial SDK. For licensing, documentation, and support:
 
 - 📧 Email: interfish@zohomail.com
-- 🐛 [Report a bug](https://github.com/interfish418/llm-feedback/issues)
-- 💡 [Request a feature](https://github.com/interfish418/llm-feedback/issues)
+- 📄 [License Terms](LICENSE)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This software is provided under a commercial license. See [LICENSE](LICENSE) file for details.
 
-## Changelog
-
-### v1.0.0
-- Initial release
-- Core feedback collection functionality
-- Voice input support
-- Customizable UI components
-- AI-powered feedback analysis
+**This is proprietary software. Unauthorized use, modification, or distribution is prohibited.**
 
 ---
 
-Made with ❤️ for Android developers
+© 2024 interfish418. All rights reserved.
